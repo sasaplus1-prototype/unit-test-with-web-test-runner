@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@web/dev-server-esbuild": "^0.4.1",
+    "@web/test-runner": "^0.16.1",
+    "@web/test-runner-playwright": "^0.10.0"
+  },
+  "private": true,
+  "scripts": {
+    "coverage": "web-test-runner '**/*.test.ts' --node-resolve --playwright --coverage",
+    "test": "web-test-runner '**/*.test.ts' --node-resolve --playwright --browsers chromium firefox webkit"
+  }
+}
