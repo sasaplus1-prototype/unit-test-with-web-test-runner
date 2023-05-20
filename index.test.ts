@@ -1,6 +1,6 @@
 import { assert } from '@esm-bundle/chai';
 
-import { removeAllChildren } from './index';
+import { removeAllChildren, convertToMs932 } from './index';
 
 describe('removeAllChildren', () => {
   it('removes all children', () => {
@@ -19,5 +19,11 @@ describe('removeAllChildren', () => {
     removeAllChildren(div);
 
     assert.strictEqual(div.children.length, 0);
+  });
+});
+
+describe('convertToMs932', () => {
+  it('convert text to MS932', () => {
+    assert(convertToMs932('あいうえお'), 'あいうえお');
   });
 });
